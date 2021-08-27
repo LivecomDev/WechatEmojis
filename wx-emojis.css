@@ -1,4 +1,4 @@
-.wx-emoji {margin: 0;padding: 0;width: 24px;height: 24px;background-color: #ccc;overflow: hidden;display: inline-block;}
+.wx-emoji {margin: 0;padding: 0;width: 24px;height: 24px;background-color: transparent;overflow: hidden;display: inline-block;}
 /* ---- First row  ---- */
 .wx-emoji.smile {background: #ccc url("http://localhost:63342/ReDesignFusebox/wxemojis202102-24.png") 0px 0px;}
 .wx-emoji.grimance {background: #ccc url("http://localhost:63342/ReDesignFusebox/wxemojis202102-24.png") -24px 0px;}
