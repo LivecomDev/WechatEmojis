@@ -1,7 +1,7 @@
 # WechatEmojis: CSS sprites and images
 -----------------------------------------------------------------------
 
-A repository with the wechat emoji set, as published in 2021. 
+A repository with the wechat emojis (images and css spritesheet) as published in 2021. 
 
 -----------------------------------------------------------------------
 
