@@ -13,6 +13,8 @@ set as published in 2021. The larger spritesheet will create emojis of
 To create any other size please scale the images in your image editor 
 and generate a new css with the scss file
 
+![alt text](https://github.com/LivecomDev/WechatEmojis/blob/main/WechatEmojiSpriteSheet.png)
+
 -----------------------------------------------------------------------
 
 # SCSS
