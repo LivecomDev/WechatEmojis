@@ -1,0 +1,51 @@
+
+// set initial variables
+$size:24px;
+$emojis: smile,grimance,drool,scowl,coolguy,sob,shy,silent,sleep,cry,awkward,angry,tongue,grin,surprise,frown,blush,scream,puke,chuckle,joyful,slight,smug,drowsy,panic,laugh,commando,scold, shocked,shhh,dizzy,tormented,toasted,skull,hammer,wave,speechless,nosepick,clap,trick,bah-r,pooh-pooh,shrunken,tearingup,sly,kiss,whimper,laugh,sick,flushed,lol,terror,letdown,duh,hey,facepalm,smirk,smart,concerned,yeah,watermelon,goforit,sweats,omg,emm,respect,doge,noprob,mybad,wow,boring,awesome,letmesee,sigh, hurt,broken,lips,heart,brokenheart,hug,thumbsup,thumbsdown,shake,peace,fight,beckon,fist,ok,worship,beer,coffee,cake,rose,wilt,clever,bomb,poop,moon,sun,party,gift,packet,blessing,fireworks,pig,waddle,tremble,twirl;
+$imgFile:'http://localhost:63342/ReDesignFusebox/wxemojis202102-24.png';
+$bgColor:transparent;
+$perRow:7;
+
+// basic emojis
+.wx-emoji{
+    margin:0;
+    padding:0;
+    width:$size;
+    height:$size;
+    background-color: $bgColor;
+    overflow: hidden;
+    display: inline-block;
+
+    // set counter variables
+    $counter: 0;
+    $yCounter: 0;
+    $yMargin:0;
+    $xCounter: -1;
+
+    // loop though emoji set
+    @for $i from 1 through length($emojis) {
+
+        $item: nth($emojis, $i);
+
+        // set horizontal steps
+        @if $xCounter > 6  {
+            $xCounter: 0;
+        }else{
+            $xCounter : $xCounter + 1;
+        }
+
+        // set vertical steps
+        @if $counter == $perRow  {
+            $yMargin:$yMargin+1;
+            $counter: 0;
+        }
+
+        // print out icon class
+        &.#{$item} {background: url($imgFile) (($xCounter*$size)*-1) (($yMargin*$size)*-1);}
+
+        // increment counter
+        $counter:$counter+1;
+    }
+}
+
+
